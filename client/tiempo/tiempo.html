@@ -1,0 +1,44 @@
+<template name="tiempo">
+  <h4>Registro de tiempo</h4>
+  <form class="form-inline">
+    <input type="text" class="form-control" id="que" placeholder="qué hiciste">
+    <select id="cuanto" class="form-control">
+      <option value="0:15">15 min</option>
+      <option value="0:30">30 min</option>
+      <option value="0:45">45 min</option>
+      <option value="1:00">1 hora</option>
+      <option value="1:15">1 hora 15 min</option>
+      <option value="1:30">1 hora 30 min</option>
+      <option value="1:45">1 hora 45 min</option>
+      <option value="2:00">2 horas</option>
+      <option value="2:15">2 horas 15 min</option>
+      <option value="2:30">2 horas 30 min</option>
+      <option value="2:45">2 horas 45 min</option>
+    </select>
+    <select id="quien" class="form-control">
+      <option value="Ambos">Ambos</option>
+      <option value="Dave">Dave</option>
+      <option value="Vicho">Vicho</option>
+    </select>
+    <button type="submit" class="btn btn-default">Ingresar</button>
+  </form>
+  <br><br>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Quién</th>
+        <th>Qué</th>
+        <th>Cuánto</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each registroTiempo}}
+      <tr>
+        <td><span class="label label-{{quienLabel}}">{{quien}}</span></td>
+        <td>{{que}}</td>
+        <td>{{cuanto}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>

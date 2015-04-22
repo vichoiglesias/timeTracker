@@ -1,0 +1,23 @@
+<head>
+  <title>timeTrack</title>
+</head>
+
+<body>
+  <div id="mainContainer">
+    <div class="container-fluid">
+      {{>contenido}}
+    </div>
+  </div>
+</body>
+
+
+<template name="contenido">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center">🕗 timeTracker: Proyecto Trazabilidad</h1>
+    </div>
+    <div class="col-md-6 col-md-offset-3">
+      {{>tiempo}}
+    </div>
+  </div>
+</template>
