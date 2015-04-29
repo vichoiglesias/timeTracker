@@ -9,8 +9,32 @@ Template.tiempo.helpers
         "success"
       when "Ambos"
         "danger"
-      
-
+  cuanto: ->
+    switch @cuanto
+      when "0:15"
+        "15min"
+      when "0:30"
+        "30min"
+      when "0:45"
+        "45min"
+      when "1:00"
+        "1h"
+      when "1:15"
+        "1h 15min"
+      when "1:30"
+        "1h 30min"
+      when "1:45"
+        "1h 45min"
+      when "2:00"
+        "2h"
+      when "2:15"
+        "2h 15min"
+      when "2:30"
+        "2h 30min"
+      when "2:45"
+        "2h 45min"
+  cuando: ->
+    moment(@cuando).fromNow()
 
 Template.tiempo.events
   "submit form": (event, template) ->
